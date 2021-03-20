@@ -7,7 +7,7 @@ using static FinancialTracker.CommonTypes.BaseTypes;
 
 namespace FinancialTracker.CommonTypes
 {
-    class BaseTypes
+    public class BaseTypes
     {
         public enum Period_E
         {
@@ -38,13 +38,13 @@ namespace FinancialTracker.CommonTypes
         }
     }
 
-    class RateOfInterest
+    public class RateOfInterest
     {
 
         /// <summary>
         /// Rate of Interest
         /// </summary>
-        public int Interest { get; set; }
+        public double Interest { get; set; }
 
         /// <summary>
         /// Period at which the rate of interest is calculated
@@ -55,5 +55,17 @@ namespace FinancialTracker.CommonTypes
         /// Recorded date for the ROI
         /// </summary>
         public DateTime Date_Of_Record { get; set; }
+
+        public RateOfInterest()
+        {
+
+        }
+
+        public RateOfInterest(double interest, Period_E period_type, DateTime start_date)
+        {
+            Interest = interest;
+            Period_Type = period_type;
+            Date_Of_Record = start_date;
+        }
     }
 }

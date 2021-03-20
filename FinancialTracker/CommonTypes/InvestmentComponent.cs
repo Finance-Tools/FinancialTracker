@@ -7,7 +7,7 @@ using static FinancialTracker.CommonTypes.BaseTypes;
 
 namespace FinancialTracker.CommonTypes
 {
-    class InvestmentComponent
+    public class InvestmentComponent
     {
 
         /// <summary>
@@ -24,8 +24,34 @@ namespace FinancialTracker.CommonTypes
         public Institute_E Institute { get; set; }
 
     }
+    public class InvestmentIteration
+    {
+        public InvestmentComponent Detail { get; set; }
+        public List<IterationUnit> Iteration { get; set; }
 
-    class DepositElements
+        public InvestmentIteration()
+        {
+            Detail = null;
+            Iteration = new List<IterationUnit>();
+        }
+    }
+
+    public class IterationUnit
+    {
+
+        public DateTime Iteration_Date { get; set; }
+
+        public double Opening_Balance { get; set; }
+
+        public IterationUnit(DateTime date, double balance)
+        {
+            this.Iteration_Date = date;
+            this.Opening_Balance = balance;
+        }
+
+    }
+
+    public class DepositElements
     {
 
         /// <summary>
@@ -47,5 +73,14 @@ namespace FinancialTracker.CommonTypes
         /// Is the Deposit Automatically renewed
         /// </summary>
         public bool Is_Auto_Renewed { get; set; }
+
+        public DepositElements(int principal, int period, double roi, bool auto_renew, DateTime start_date, Period_E period_type)
+        {
+            Principal = principal;
+            Period = period;
+            Rate_Of_Interest_List = new List<RateOfInterest>();
+            Rate_Of_Interest_List.Add(new RateOfInterest(roi, period_type, start_date));
+            Is_Auto_Renewed = auto_renew;
+        }
     }
 }
