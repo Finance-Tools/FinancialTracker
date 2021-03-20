@@ -55,7 +55,7 @@ namespace FinancialTracker
                     }
                 }
             }
-            this.Formatter = value => new DateTime((long)value).ToString("MM/yy");
+            this.Formatter = value => new DateTime((long)value).ToString("M-yy");
 
             this.DataContext = this;
         }
