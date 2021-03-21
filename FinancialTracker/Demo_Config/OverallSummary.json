@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "SBI_FD_10K",
+    "Type": 1,
+    "Deposit_Elements": {
+      "Principal": 10000,
+      "Period": 1,
+      "Rate_Of_Interest_List": [
+        {
+          "Interest": 5.6,
+          "Period_Type": 1,
+          "Date_Of_Record": "2021-03-21T14:52:59.0976179+05:30"
+        }
+      ],
+      "Creation_Date": "2021-03-21T00:00:00+05:30",
+      "Is_Auto_Renewed": true
+    },
+    "Stock_Element": 0,
+    "Institute": 0
+  }
+]

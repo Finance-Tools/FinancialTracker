@@ -21,6 +21,8 @@ namespace FinancialTracker.CommonTypes
 
         public DepositElements Deposit_Elements { get; set; }
 
+        public int Stock_Element { get; set; }  // TODO: to be described as Deposit_Elements, but for securities - Stock, MF, ETF, etc.
+
         public Institute_E Institute { get; set; }
 
     }

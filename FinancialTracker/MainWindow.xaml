@@ -8,7 +8,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="label" Content="Financial Tracker GUI" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" Click="MenuItem_Click" />
+                    <MenuItem Header="_Save" Click="MenuItem_Click" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <Label x:Name="label" Content="Financial Tracker GUI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,27,0,0"/>
         <!--<lvc:CartesianChart x:Name="graphInvestmentOverview" Series="{Binding temp_collection}" Margin="0,26,20.333,9.667" >
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Labels="{Binding Labels}" Position="LeftBottom" >
@@ -18,6 +30,6 @@
                 </lvc:Axis>
             </lvc:CartesianChart.AxisX>
         </lvc:CartesianChart>-->
-        <Button x:Name="buttonTrackInvestment" Content="Track" HorizontalAlignment="Left" Margin="124,3,0,0" VerticalAlignment="Top" Width="75" Click="buttonTrackInvestment_Click"/>
+        <Button x:Name="buttonTrackInvestment" Content="Track" HorizontalAlignment="Left" Margin="124,30,0,0" VerticalAlignment="Top" Width="75" Click="buttonTrackInvestment_Click"/>
     </Grid>
 </Window>
