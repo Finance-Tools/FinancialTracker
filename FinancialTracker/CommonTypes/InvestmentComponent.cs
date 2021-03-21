@@ -69,6 +69,8 @@ namespace FinancialTracker.CommonTypes
         /// </summary>
         public List<RateOfInterest> Rate_Of_Interest_List { get; set; }
 
+        public DateTime Creation_Date { get; set; }
+
         /// <summary>
         /// Is the Deposit Automatically renewed
         /// </summary>
@@ -80,6 +82,7 @@ namespace FinancialTracker.CommonTypes
             Period = period;
             Rate_Of_Interest_List = new List<RateOfInterest>();
             Rate_Of_Interest_List.Add(new RateOfInterest(roi, period_type, start_date));
+            Creation_Date = DateTime.Today;
             Is_Auto_Renewed = auto_renew;
         }
     }

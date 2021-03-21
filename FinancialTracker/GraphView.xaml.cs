@@ -50,8 +50,6 @@ namespace FinancialTracker
                     foreach (IterationUnit itr in col.Iteration)
                     {
                         item.Values.Add(itr);
-
-
                     }
                 }
             }

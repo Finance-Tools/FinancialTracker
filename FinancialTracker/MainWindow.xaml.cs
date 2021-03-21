@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FinancialTracker.CommonTypes;
+using FinancialTracker.Library;
 using LiveCharts;
 using LiveCharts.Configurations;
 using LiveCharts.Wpf;
@@ -50,6 +51,11 @@ namespace FinancialTracker
             FD_Itr_Demo.Iteration.Add(new IterationUnit(new DateTime(2023, 5, 1), 10300));
             FD_Itr_Demo.Iteration.Add(new IterationUnit(new DateTime(2025, 5, 1), 10300));
 
+            InvestmentParser obj = new InvestmentParser();
+
+            FD_Itr_Demo.Iteration.Clear();
+
+            FD_Itr_Demo.Iteration.AddRange(obj.Get_IterationUnits(FD_Demo));
         }
 
         private void buttonTrackInvestment_Click(object sender, RoutedEventArgs e)
