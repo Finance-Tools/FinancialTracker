@@ -55,7 +55,7 @@ namespace FinancialTracker
 
             FD_Itr_Demo.Iteration.Clear();
 
-            FD_Itr_Demo.Iteration.AddRange(obj.Get_IterationUnits(FD_Demo));
+            FD_Itr_Demo.Iteration.AddRange(obj.Get_IterationUnits(FD_Demo, 30, Period_E.Annual));
         }
 
         private void buttonTrackInvestment_Click(object sender, RoutedEventArgs e)
